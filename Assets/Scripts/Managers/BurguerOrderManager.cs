@@ -20,7 +20,7 @@
 
         private string[] _currentOrderIngredientsNames;
 
-        // Use this for initialization
+
         void Start()
         {
             RandomizeOrders();
