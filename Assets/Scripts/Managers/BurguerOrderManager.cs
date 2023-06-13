@@ -1,6 +1,7 @@
 ﻿namespace Assets.Scripts.Managers
 {
     using Assets.Scripts._ScriptableObjects;
+    using Assets.Scripts.Services;
     using System;
     using System.Collections.Generic;
     using UnityEngine;
@@ -13,7 +14,8 @@
         public UnityEvent OnEndOrder;
 
         public List<BurgerData> Orders;
-        public BurgerData CurrentOrder;
+        private List<BurgerData> _ordersRandomized;
+        private BurgerData _currentOrder;
         private int _currentOrderIndex;
 
         private string[] _currentOrderIngredientsNames;
@@ -21,14 +23,19 @@
         // Use this for initialization
         void Start()
         {
-            SetInitialOrder();
-
+            RandomizeOrders();
+            Set_currentOrderWithFirstOnOrdersList();
             InitializeOrderIngredientsNames();
         }
 
-        private void SetInitialOrder()
+        private void RandomizeOrders()
         {
-            CurrentOrder = Orders[0];
+            _ordersRandomized = ListRandomizer.Randomize(Orders);
+        }
+
+        private void Set_currentOrderWithFirstOnOrdersList()
+        {
+            _currentOrder = _ordersRandomized[0];
             _currentOrderIndex = 0;
         }
 
@@ -40,23 +47,17 @@
 
         private void InitializeIngredientsNamesArrayWithSameSizeOfOrderIngredients()
         {
-            int length = CurrentOrder.Ingredients.Length;
+            int length = _currentOrder.Ingredients.Length;
             _currentOrderIngredientsNames = new string[length];
         }
 
         private void PopulateIngredientsNameArray()
         {
-            for (int i = 0; i < CurrentOrder.Ingredients.Length; i++)
+            for (int i = 0; i < _currentOrder.Ingredients.Length; i++)
             {
-                string ingredientName = CurrentOrder.Ingredients[i].name;
+                string ingredientName = _currentOrder.Ingredients[i].name;
                 _currentOrderIngredientsNames[i] = ingredientName;
             }
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
 
         public void IsMountedBurgerIngredientsCorrect(string[] ingredientsNames)
@@ -80,7 +81,7 @@
             _currentOrderIndex++;
             if (HasNextOrder())
             {
-                CurrentOrder = GetNextOrder();
+                _currentOrder = GetNextOrder();
             }
             else
             {
@@ -90,12 +91,12 @@
 
         private bool HasNextOrder()
         {
-            return (Orders[_currentOrderIndex]);
+            return (_ordersRandomized[_currentOrderIndex]);
         }
 
         private BurgerData GetNextOrder()
         {
-            return Orders[_currentOrderIndex];
+            return _ordersRandomized[_currentOrderIndex];
         }
 
     }
