@@ -1,46 +1,59 @@
 namespace Assets.Scripts.Components
 {
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
     using UnityEngine;
+    using UnityEngine.Events;
 
     public class IngredientsSelector : MonoBehaviour
     {
-        public GameObject[] IngredientsList = new GameObject[3];
+        public UnityEvent<string[]> OnMountBurger;
+        private string[] _ingredientsNameArray = new string[3];
+
         
-        
-        public void AddIngredientToList(GameObject gameObject)
+        public void AddIngredientToMount(GameObject gameObject)
         {
-            int length = IngredientsList.Length;
+            IterateThroughIngredientsArrayAndAddIngredientOnNullIndex(gameObject);
+            SendIngredientsWhenLastItemOnArrayIsNotNull();
+        }
+
+        private void IterateThroughIngredientsArrayAndAddIngredientOnNullIndex(GameObject gameObject)
+        {
+            int length = _ingredientsNameArray.Length;
             for (int index = 0; index < length; index++)
             {
-                if (IngredientsList[index] == null)
+                if (_ingredientsNameArray[index] == null)
                 {
-                    IngredientsList[index] = gameObject;
+                    _ingredientsNameArray[index] = gameObject.transform.name;
                     break;
                 }
             }
-
-            
-
-            if (IngredientsList[length - 1] != null)
-            {
-                Debug.Log("FIRE EVENT");
-                Debug.Log("MOUNT SANDWICH");
-                foreach (GameObject ingredient in IngredientsList)
-                {
-                    Debug.Log(ingredient.name);
-                }
-                Debug.Log("APPLY SCORE LOGIC");
-                Array.Clear(IngredientsList, 0, length);
-            }
-
         }
 
-        public void DebugMessage()
+        private void SendIngredientsWhenLastItemOnArrayIsNotNull()
         {
-            Debug.Log("THE GAME STARTED");
+            bool isNotNull = IsLastIndexNotNull();
+            if (isNotNull)
+            {
+                MountBurgerThenClearArray();
+            }
+        }
+
+        private bool IsLastIndexNotNull()
+        {
+            int lastIndex = _ingredientsNameArray.Length - 1;
+            return (_ingredientsNameArray[lastIndex] != null);
+        }
+
+        private void MountBurgerThenClearArray()
+        {
+            OnMountBurger?.Invoke(_ingredientsNameArray);
+            ClearIngredientsArray();
+        }
+
+        private void ClearIngredientsArray()
+        {
+            int length = _ingredientsNameArray.Length;
+            Array.Clear(_ingredientsNameArray, 0, length);
         }
 
     }
