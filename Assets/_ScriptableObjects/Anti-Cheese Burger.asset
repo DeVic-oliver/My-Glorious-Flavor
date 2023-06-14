@@ -15,6 +15,6 @@ MonoBehaviour:
   TheBurgerPrefab: {fileID: 6482067591356806721, guid: 9728eb3b72c49544db14ab2f40f76149, type: 3}
   Name: Anti-Cheese Burger
   Ingredients:
-  - {fileID: 6266168646976835033, guid: 88205bba415c46a498834aa6181736ae, type: 3}
-  - {fileID: 6342116597442374351, guid: ffa1f63497c24beaab5a8fcb9f7da89b, type: 3}
-  - {fileID: 6493427094654689921, guid: 1c63d18aaf664fb4b30de6e9e10f1908, type: 3}
+  - {fileID: 11400000, guid: 331fb6eef92f7e94780f7a09c266b32f, type: 2}
+  - {fileID: 11400000, guid: 40f36f83a7de8fc4f8a05a44800bdf8f, type: 2}
+  - {fileID: 11400000, guid: 8292b84d5ea51664f864b44686109475, type: 2}

@@ -15,6 +15,6 @@ MonoBehaviour:
   TheBurgerPrefab: {fileID: 6898649830415136180, guid: f63433e00c79a5b49b13331be5abb7ed, type: 3}
   Name: Beef Burger
   Ingredients:
-  - {fileID: 6342116597442374351, guid: ffa1f63497c24beaab5a8fcb9f7da89b, type: 3}
-  - {fileID: 104102488771536186, guid: c6e987214d044d418a8943cc80b38538, type: 3}
-  - {fileID: 3376390185925611032, guid: 80869c1ff48e4f88bfd0af8bf1a8e71f, type: 3}
+  - {fileID: 11400000, guid: 40f36f83a7de8fc4f8a05a44800bdf8f, type: 2}
+  - {fileID: 11400000, guid: 380efc4c61bc88e4f96b79ea76b89152, type: 2}
+  - {fileID: 11400000, guid: 359991200aabe2043bd381030f69f221, type: 2}
