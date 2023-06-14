@@ -125,6 +125,27 @@
                 _currentOrderIngredientsNames.Add(ingredientName);
             }
         }
+
+        private int GetCurrentOrderIngredientsLength()
+        {
+            return GetCurrentOrderIngredients().Length;
+        }
+
+        private BurgerIngredient[] GetCurrentOrderIngredients()
+        {
+            return _currentOrder.Ingredients;
+        }
+
+        private BurgerIngredient GetCurrentOrderIngredientIn(int index)
+        {
+            return _currentOrder.Ingredients[index];
+        }
+
+        private void ClearIngredientsNamesList()
+        {
+            _currentOrderIngredientsNames.Clear();
+        }
+
         private void UpdateTheOrderTableWithCurrentOrderData()
         {
             _tableManager.SetBurgerOnTable(_currentOrder);
