@@ -141,6 +141,13 @@
             return _currentOrder.Ingredients[index];
         }
 
+        private void ClearOrderDataThenInvokeEndEvents()
+        {
+            _currentOrder = null;
+            ClearIngredientsNamesList();
+            OnEndOrder?.Invoke();
+        }
+
         private void ClearIngredientsNamesList()
         {
             _currentOrderIngredientsNames.Clear();
