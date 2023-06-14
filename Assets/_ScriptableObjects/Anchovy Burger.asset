@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a38746918882934c9095768fee6948d, type: 3}
-  m_Name: Vegan Burger
+  m_Name: Anchovy Burger
   m_EditorClassIdentifier: 
-  Icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  Name: Vegan burger
+  TheBurgerPrefab: {fileID: 2698944821118821148, guid: 6f1a1b3f8e9a4f24f91175225854c17b, type: 3}
+  Name: Anchovy Burger
   Ingredients:
   - {fileID: 6266168646976835033, guid: 88205bba415c46a498834aa6181736ae, type: 3}
-  - {fileID: 7089149834101145778, guid: 1723fb0222144c2287d39c1e6408c399, type: 3}
-  - {fileID: 8522121697586932146, guid: f2271f10964844019954feda1436d6ee, type: 3}
+  - {fileID: 104102488771536186, guid: c6e987214d044d418a8943cc80b38538, type: 3}
+  - {fileID: 6493427094654689921, guid: 1c63d18aaf664fb4b30de6e9e10f1908, type: 3}

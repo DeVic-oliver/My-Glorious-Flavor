@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a38746918882934c9095768fee6948d, type: 3}
-  m_Name: BeefBurger
+  m_Name: Beef Slice B Burger
   m_EditorClassIdentifier: 
-  Icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  TheBurgerPrefab: {fileID: 6898649830415136180, guid: f63433e00c79a5b49b13331be5abb7ed, type: 3}
   Name: Beef Burger
   Ingredients:
-  - {fileID: 6266168646976835033, guid: 88205bba415c46a498834aa6181736ae, type: 3}
-  - {fileID: 7637728487931863546, guid: 5bbb2b91932c4930986d8b90d9de154a, type: 3}
-  - {fileID: 9223016425213547794, guid: 631ba866b6de423abf335d1c6c171d90, type: 3}
+  - {fileID: 6342116597442374351, guid: ffa1f63497c24beaab5a8fcb9f7da89b, type: 3}
+  - {fileID: 104102488771536186, guid: c6e987214d044d418a8943cc80b38538, type: 3}
+  - {fileID: 3376390185925611032, guid: 80869c1ff48e4f88bfd0af8bf1a8e71f, type: 3}
