@@ -25,7 +25,7 @@
         void Start()
         {
             RandomizeOrders();
-            Set_currentOrderWithFirstOnOrdersList();
+            SetCurrentOrderWithFirstOnOrdersList();
             InitializeOrderIngredientsNames();
         }
 
@@ -34,7 +34,7 @@
             _ordersRandomized = ListRandomizer.Randomize(Orders);
         }
 
-        private void Set_currentOrderWithFirstOnOrdersList()
+        private void SetCurrentOrderWithFirstOnOrdersList()
         {
             _currentOrder = _ordersRandomized[0];
             _currentOrderIndex = 0;
