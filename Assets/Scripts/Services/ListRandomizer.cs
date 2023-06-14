@@ -7,7 +7,7 @@
     {
         public static List<T> Randomize<T>(List<T> listToRandomize)
         {
-            List<T> originalList = listToRandomize;
+            List<T> originalList = new List<T>(listToRandomize);
             List<T> randomizedList = new List<T>();
 
             for (int i = originalList.Count; i > 0; i--)
