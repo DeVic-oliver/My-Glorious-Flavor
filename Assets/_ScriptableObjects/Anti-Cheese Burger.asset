@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a38746918882934c9095768fee6948d, type: 3}
+  m_Name: Anti-Cheese Burger
+  m_EditorClassIdentifier: 
+  TheBurgerPrefab: {fileID: 6482067591356806721, guid: 9728eb3b72c49544db14ab2f40f76149, type: 3}
+  Name: Anti-Cheese Burger
+  Ingredients:
+  - {fileID: 11400000, guid: 331fb6eef92f7e94780f7a09c266b32f, type: 2}
+  - {fileID: 11400000, guid: 40f36f83a7de8fc4f8a05a44800bdf8f, type: 2}
+  - {fileID: 11400000, guid: 8292b84d5ea51664f864b44686109475, type: 2}
