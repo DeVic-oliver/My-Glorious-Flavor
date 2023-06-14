@@ -73,23 +73,41 @@
             ClearIngredientsNamesList();
             return true;
         }
-
+        
         private void SetNextOrder()
         {
-            _currentOrderIndex++;
             if (HasNextOrder())
             {
-                _currentOrder = GetNextOrder();
+                
+                SetNextOrderDataThenUpdateTable();
             }
             else
             {
-                OnEndOrder?.Invoke();
+                ClearOrderDataThenInvokeEndEvents();
+                
             }
         }
 
         private bool HasNextOrder()
         {
             return (_ordersRandomized[_currentOrderIndex]);
+            int nextIndex = _currentOrderIndex + 1;
+            try
+            {
+                return (Orders[nextIndex]);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private void SetNextOrderDataThenUpdateTable()
+        {
+            _currentOrderIndex++;
+            _currentOrder = GetNextOrder();
+            UpdateIngredientsNameArray();
+            UpdateTheOrderTableWithCurrentOrderData();
         }
 
         private BurgerData GetNextOrder()
