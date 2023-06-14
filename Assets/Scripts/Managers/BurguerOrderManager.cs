@@ -90,7 +90,6 @@
 
         private bool HasNextOrder()
         {
-            return (_ordersRandomized[_currentOrderIndex]);
             int nextIndex = _currentOrderIndex + 1;
             try
             {
