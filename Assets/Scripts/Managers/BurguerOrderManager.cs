@@ -46,12 +46,17 @@
             UpdateIngredientsNameArray();
         }
 
+        public void IsMountedBurgerIngredientsCorrect(string[] ingredientsNames)
         {
-            for (int i = 0; i < _currentOrder.Ingredients.Length; i++)
+            if (IsMountedCorrectly(ingredientsNames))
             {
-                string ingredientName = _currentOrder.Ingredients[i].name;
-                _currentOrderIngredientsNames[i] = ingredientName;
+                OnOrderMountSuccess?.Invoke();
             }
+            else
+            {
+                OnOrderMountFail?.Invoke();
+            }
+            SetNextOrder();
         }
 
         public void IsMountedBurgerIngredientsCorrect(string[] ingredientsNames)
