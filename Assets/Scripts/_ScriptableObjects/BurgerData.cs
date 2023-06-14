@@ -5,11 +5,11 @@
     #endif
     using UnityEngine;
 
-    [CreateAssetMenu(fileName = "Burger", menuName = "ScriptableObjects/Burguers")]
+    [CreateAssetMenu(fileName = "Burger", menuName = "ScriptableObjects/Food/Burger")]
     public class BurgerData : ScriptableObject
     {
-        public Sprite Icon;
+        public GameObject TheBurgerPrefab;
         public string Name;
-        public GameObject[] Ingredients = new GameObject[3];
+        public BurgerIngredient[] Ingredients = new BurgerIngredient[3];
     }
 }
