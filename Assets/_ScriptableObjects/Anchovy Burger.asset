@@ -15,6 +15,6 @@ MonoBehaviour:
   TheBurgerPrefab: {fileID: 2698944821118821148, guid: 6f1a1b3f8e9a4f24f91175225854c17b, type: 3}
   Name: Anchovy Burger
   Ingredients:
-  - {fileID: 6266168646976835033, guid: 88205bba415c46a498834aa6181736ae, type: 3}
-  - {fileID: 104102488771536186, guid: c6e987214d044d418a8943cc80b38538, type: 3}
-  - {fileID: 6493427094654689921, guid: 1c63d18aaf664fb4b30de6e9e10f1908, type: 3}
+  - {fileID: 11400000, guid: 331fb6eef92f7e94780f7a09c266b32f, type: 2}
+  - {fileID: 11400000, guid: 380efc4c61bc88e4f96b79ea76b89152, type: 2}
+  - {fileID: 11400000, guid: 8292b84d5ea51664f864b44686109475, type: 2}
