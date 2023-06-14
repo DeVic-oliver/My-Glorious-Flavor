@@ -1,21 +1,46 @@
-﻿
-namespace Assets.Scripts.Managers
+﻿namespace Assets.Scripts.Managers
 {
-    using System.Collections;
+    using TMPro;
     using UnityEngine;
+
     public class ScoreManager : MonoBehaviour
     {
+        [SerializeField] private TextMeshProUGUI _scoreTMP;
 
-        // Use this for initialization
-        void Start()
+        public int CurrentScore { get; private set;  }
+
+
+        public void IncrementScore()
         {
-
+            CurrentScore++;
+            UpdateScoreTMP();
         }
 
-        // Update is called once per frame
-        void Update()
+        public void DecrementScore()
         {
-
+            CurrentScore--;
+            SetScoreToZeroWhenLessThanZero();
+            UpdateScoreTMP();
         }
+
+        private void SetScoreToZeroWhenLessThanZero()
+        {
+            if (CurrentScore < 0)
+            {
+                ResetScore();
+            }
+        }
+
+        private void ResetScore()
+        {
+            CurrentScore = 0;
+            UpdateScoreTMP();
+        }
+
+        private void UpdateScoreTMP()
+        {
+            _scoreTMP.text = CurrentScore.ToString();
+        }
+
     }
 }
