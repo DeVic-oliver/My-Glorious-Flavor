@@ -43,6 +43,7 @@
 
         private void InitializeOrderIngredientsNames()
         {
+            UpdateIngredientsNameArray();
         }
 
         {
@@ -92,6 +93,16 @@
             return _ordersRandomized[_currentOrderIndex];
         }
 
+        private void UpdateIngredientsNameArray()
+        {
+            int length = GetCurrentOrderIngredientsLength();
+            for (int i = 0; i < length; i++)
+            {
+                BurgerIngredient ingredient = GetCurrentOrderIngredientIn(i);
+                string ingredientName = ingredient.Name;
+                _currentOrderIngredientsNames.Add(ingredientName);
+            }
+        }
         private void UpdateTheOrderTableWithCurrentOrderData()
         {
             _tableManager.SetBurgerOnTable(_currentOrder);
