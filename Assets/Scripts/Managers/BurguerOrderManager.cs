@@ -59,20 +59,19 @@
             SetNextOrder();
         }
 
-        public void IsMountedBurgerIngredientsCorrect(string[] ingredientsNames)
+        private bool IsMountedCorrectly(string[] ingredientsNames)
         {
             foreach (string itemName in ingredientsNames)
             {
-                int pos = Array.IndexOf(_currentOrderIngredientsNames, itemName);
-                if(pos == -1)
+                if (!_currentOrderIngredientsNames.Contains(itemName))
                 {
-                    OnOrderMountFail?.Invoke();
-                    SetNextOrder();
-                    break;
+                    ClearIngredientsNamesList();
+                    return false;
                 }
+                _currentOrderIngredientsNames.Remove(itemName);
             }
-            OnOrderMountSuccess?.Invoke();
-            SetNextOrder();
+            ClearIngredientsNamesList();
+            return true;
         }
 
         private void SetNextOrder()
