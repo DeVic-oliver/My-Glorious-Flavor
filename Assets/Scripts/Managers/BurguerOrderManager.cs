@@ -19,8 +19,7 @@
         private List<BurgerData> _ordersRandomized;
         private BurgerData _currentOrder;
         private int _currentOrderIndex;
-
-        private string[] _currentOrderIngredientsNames;
+        private List<string> _currentOrderIngredientsNames = new();
 
 
         void Start()
