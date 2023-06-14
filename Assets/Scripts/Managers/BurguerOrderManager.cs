@@ -42,17 +42,8 @@
 
         private void InitializeOrderIngredientsNames()
         {
-            InitializeIngredientsNamesArrayWithSameSizeOfOrderIngredients();
-            PopulateIngredientsNameArray();
         }
 
-        private void InitializeIngredientsNamesArrayWithSameSizeOfOrderIngredients()
-        {
-            int length = _currentOrder.Ingredients.Length;
-            _currentOrderIngredientsNames = new string[length];
-        }
-
-        private void PopulateIngredientsNameArray()
         {
             for (int i = 0; i < _currentOrder.Ingredients.Length; i++)
             {
