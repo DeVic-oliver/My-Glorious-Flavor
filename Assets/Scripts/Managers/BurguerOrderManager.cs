@@ -2,7 +2,6 @@
 {
     using Assets.Scripts._ScriptableObjects;
     using Assets.Scripts.Services;
-    using System;
     using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.Events;
@@ -14,6 +13,9 @@
         public UnityEvent OnEndOrder;
 
         public List<BurgerData> Orders;
+        
+        [SerializeField] private BurgerOrderTableManager _tableManager;
+
         private List<BurgerData> _ordersRandomized;
         private BurgerData _currentOrder;
         private int _currentOrderIndex;
