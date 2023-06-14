@@ -1,5 +1,6 @@
 namespace Assets.Scripts.Components
 {
+    using Assets.Scripts._ScriptableObjects;
     using System;
     using UnityEngine;
     using UnityEngine.Events;
@@ -10,20 +11,20 @@ namespace Assets.Scripts.Components
         private string[] _ingredientsNameArray = new string[3];
 
         
-        public void AddIngredientToMount(GameObject gameObject)
+        public void AddIngredientToMount(BurgerIngredient ingredient)
         {
-            IterateThroughIngredientsArrayAndAddIngredientOnNullIndex(gameObject);
+            IterateThroughIngredientsArrayAndAddIngredientOnNullIndex(ingredient);
             SendIngredientsWhenLastItemOnArrayIsNotNull();
         }
 
-        private void IterateThroughIngredientsArrayAndAddIngredientOnNullIndex(GameObject gameObject)
+        private void IterateThroughIngredientsArrayAndAddIngredientOnNullIndex(BurgerIngredient ingredient)
         {
             int length = _ingredientsNameArray.Length;
             for (int index = 0; index < length; index++)
             {
                 if (_ingredientsNameArray[index] == null)
                 {
-                    _ingredientsNameArray[index] = gameObject.transform.name;
+                    _ingredientsNameArray[index] = ingredient.Name;
                     break;
                 }
             }
