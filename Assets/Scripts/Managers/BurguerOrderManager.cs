@@ -38,6 +38,7 @@
         {
             _currentOrder = _ordersRandomized[0];
             _currentOrderIndex = 0;
+            UpdateTheOrderTableWithCurrentOrderData();
         }
 
         private void InitializeOrderIngredientsNames()
@@ -89,6 +90,11 @@
         private BurgerData GetNextOrder()
         {
             return _ordersRandomized[_currentOrderIndex];
+        }
+
+        private void UpdateTheOrderTableWithCurrentOrderData()
+        {
+            _tableManager.SetBurgerOnTable(_currentOrder);
         }
 
     }
