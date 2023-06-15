@@ -3,6 +3,7 @@
     using Assets.Scripts._ScriptableObjects;
     using Assets.Scripts.Services;
     using System.Collections.Generic;
+    using TMPro;
     using UnityEngine;
     using UnityEngine.Events;
 
@@ -15,11 +16,13 @@
         public List<BurgerData> Orders;
         
         [SerializeField] private BurgerOrderTableManager _tableManager;
+        [SerializeField] private TextMeshProUGUI _orderCount;
 
         private List<BurgerData> _ordersRandomized;
         private BurgerData _currentOrder;
         private int _currentOrderIndex;
         private List<string> _currentOrderIngredientsNames = new();
+        private int _ordersRemaining;
 
 
         void Start()
@@ -27,6 +30,7 @@
             RandomizeOrders();
             SetCurrentOrderWithFirstOnOrdersList();
             InitializeOrderIngredientsNames();
+            _ordersRemaining = Orders.Count;
         }
 
         private void RandomizeOrders()
@@ -107,6 +111,7 @@
             _currentOrder = GetNextOrder();
             UpdateIngredientsNameArray();
             UpdateTheOrderTableWithCurrentOrderData();
+            UpdateOrdersCount();
         }
 
         private BurgerData GetNextOrder()
@@ -155,6 +160,16 @@
         private void UpdateTheOrderTableWithCurrentOrderData()
         {
             _tableManager.SetBurgerOnTable(_currentOrder);
+        }
+
+        private void UpdateOrdersCount()
+        {
+            _ordersRemaining--;
+            if(_ordersRemaining <= 0 ) 
+            { 
+                _ordersRemaining = 0;
+            }
+            _orderCount.text = _ordersRemaining.ToString();
         }
 
     }
