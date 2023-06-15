@@ -10,6 +10,6 @@
     {
         public string Name;
         public Sprite IngredientIcon;
-        public GameObject IngredientPrefab;
+        //public GameObject IngredientPrefab;
     }
 }
