@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a38746918882934c9095768fee6948d, type: 3}
+  m_Name: The USA Morning
+  m_EditorClassIdentifier: 
+  TheBurgerPrefab: {fileID: 7293520505681734097, guid: c1e53d3cc248eb1478584c38fcc0349a, type: 3}
+  Name: Good Morning USA
+  Ingredients:
+  - {fileID: 11400000, guid: 8c7c58452e821d04ab9840d98eb05851, type: 2}
+  - {fileID: 11400000, guid: 47e0ef8b49d17e44c8041dd3d93e4af9, type: 2}
+  - {fileID: 11400000, guid: 380efc4c61bc88e4f96b79ea76b89152, type: 2}

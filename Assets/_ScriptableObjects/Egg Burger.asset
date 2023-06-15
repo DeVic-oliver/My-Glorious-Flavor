@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a38746918882934c9095768fee6948d, type: 3}
+  m_Name: Egg Burger
+  m_EditorClassIdentifier: 
+  TheBurgerPrefab: {fileID: 3789075836442873052, guid: 9b358c8ca2b76374986c74eb155d8ffa, type: 3}
+  Name: Egg Burger
+  Ingredients:
+  - {fileID: 11400000, guid: 47e0ef8b49d17e44c8041dd3d93e4af9, type: 2}
+  - {fileID: 11400000, guid: 8292b84d5ea51664f864b44686109475, type: 2}
+  - {fileID: 11400000, guid: 380efc4c61bc88e4f96b79ea76b89152, type: 2}
