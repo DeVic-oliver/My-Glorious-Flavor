@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c8e33fe8ce068b4fa795cdcc226f34b, type: 3}
-  m_Name: Onion
+  m_Name: Egg
   m_EditorClassIdentifier: 
-  Name: Onion Slice
-  IngredientIcon: {fileID: 21300000, guid: 28b180278493e4d0ea58f28a1c0ba01f, type: 3}
-  IngredientPrefab: {fileID: 4945835359515133032, guid: fc8473ddd735488d806dfffa88403bc7, type: 3}
+  Name: Egg
+  IngredientIcon: {fileID: 21300000, guid: db2a00ff894de47e4a7451b104b04eeb, type: 3}
+  IngredientPrefab: {fileID: 7189400104764507596, guid: 39734bf52e6146fbbb956b19f593d852, type: 3}
