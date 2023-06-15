@@ -10,7 +10,7 @@
         
         public void RestartScene()
         {
-            if(_currentSceneCoroutine != null )
+            if(_currentSceneCoroutine == null )
             {
                 _currentSceneCoroutine = StartCoroutine(ReloadSceneCoroutine());
             }

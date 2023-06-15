@@ -40,6 +40,7 @@
         private void UpdateScoreTMP()
         {
             _scoreTMP.text = CurrentScore.ToString();
+            Debug.Log(_scoreTMP.text);
         }
 
     }
