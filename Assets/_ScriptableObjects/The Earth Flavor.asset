@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a38746918882934c9095768fee6948d, type: 3}
+  m_Name: The Earth Flavor
+  m_EditorClassIdentifier: 
+  TheBurgerPrefab: {fileID: 1165607012661121486, guid: 13ccef5b92ed07f43a4e6c2e91b0eda1, type: 3}
+  Name: The Earth Flavor
+  Ingredients:
+  - {fileID: 11400000, guid: 79150693e3f58f24d9fcfdd7456ce144, type: 2}
+  - {fileID: 11400000, guid: c1ca3d85c7faa4e438aea3ffb1b1e901, type: 2}
+  - {fileID: 11400000, guid: 359991200aabe2043bd381030f69f221, type: 2}

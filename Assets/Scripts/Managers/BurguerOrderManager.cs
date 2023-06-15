@@ -27,10 +27,16 @@
 
         void Start()
         {
+            InitTMPCount();
             RandomizeOrders();
             SetCurrentOrderWithFirstOnOrdersList();
             InitializeOrderIngredientsNames();
+        }
+
+        private void InitTMPCount()
+        {
             _ordersRemaining = Orders.Count;
+            _orderCount.text = _ordersRemaining.ToString();
         }
 
         private void RandomizeOrders()
