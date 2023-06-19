@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The Cheese Supremacy
   m_EditorClassIdentifier: 
   TheBurgerPrefab: {fileID: 4823721155297364341, guid: 39c01b9fcb2c2124f96d20d36d6a6cea, type: 3}
-  Name: The Cheese Sumpremacy
+  Name: The Cheese Supremacy
   Ingredients:
   - {fileID: 11400000, guid: 380efc4c61bc88e4f96b79ea76b89152, type: 2}
   - {fileID: 11400000, guid: 380efc4c61bc88e4f96b79ea76b89152, type: 2}
